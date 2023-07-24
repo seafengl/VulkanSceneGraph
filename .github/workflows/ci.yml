@@ -48,4 +48,9 @@ jobs:
          else
               echo "$RUNNER_OS not supported"
               exit 1
-         fi     
+         fi
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v3.1.2
+      with:
+        name: vsg_install
+        path: "C:/Program Files (x86)/vsg"
